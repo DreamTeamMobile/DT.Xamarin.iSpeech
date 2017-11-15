@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCC5C2FE-AF9D-4690-A74C-78D1727E46EC}</ProjectGuid>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DT.iSpeech</RootNamespace>
+    <AssemblyName>libiSpeech</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BTouchExtraArgs></BTouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="libiSpeechSDK.linkwith.cs">
+      <DependentUpon>libiSpeechSDK.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+    <ObjcBindingApiDefinition Include="Constants.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="Structs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="iSpeechSDK.bundle\ISPopupBackground.png" />
+    <BundleResource Include="iSpeechSDK.bundle\ISPopupBackground%402x.png" />
+    <BundleResource Include="iSpeechSDK.bundle\ISPopupButton.png" />
+    <BundleResource Include="iSpeechSDK.bundle\ISPopupButton%402x.png" />
+    <BundleResource Include="iSpeechSDK.bundle\ISPopupButtonPress.png" />
+    <BundleResource Include="iSpeechSDK.bundle\ISPopupButtonPress%402x.png" />
+    <BundleResource Include="iSpeechSDK.bundle\ISPopupDefaultButton.png" />
+    <BundleResource Include="iSpeechSDK.bundle\ISPopupDefaultButton%402x.png" />
+    <BundleResource Include="iSpeechSDK.bundle\Info.plist" />
+    <BundleResource Include="iSpeechSDK.bundle\fail.wav" />
+    <BundleResource Include="iSpeechSDK.bundle\failed.png" />
+    <BundleResource Include="iSpeechSDK.bundle\failed%402x.png" />
+    <BundleResource Include="iSpeechSDK.bundle\iSpeechLogo.png" />
+    <BundleResource Include="iSpeechSDK.bundle\iSpeechLogo%402x.png" />
+    <BundleResource Include="iSpeechSDK.bundle\microphone.png" />
+    <BundleResource Include="iSpeechSDK.bundle\microphone%402x.png" />
+    <BundleResource Include="iSpeechSDK.bundle\startRecord.wav" />
+    <BundleResource Include="iSpeechSDK.bundle\stopRecord.wav" />
+    <BundleResource Include="iSpeechSDK.bundle\success.png" />
+    <BundleResource Include="iSpeechSDK.bundle\success.wav" />
+    <BundleResource Include="iSpeechSDK.bundle\success%402x.png" />
+    <BundleResource Include="iSpeechSDK.bundle\ar.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\cs.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\da.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\de.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\en.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\es.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\fi.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\fr.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\hu.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\it.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\ja.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\ko.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\nb.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\nl.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\pl.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\pt-PT.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\pt.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\ru.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\sv.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\tr.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\zh-Hans.lproj\Localizable.strings" />
+    <BundleResource Include="iSpeechSDK.bundle\zh-Hant.lproj\Localizable.strings" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libiSpeechSDK.a" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+</Project>
